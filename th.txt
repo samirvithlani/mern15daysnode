@@ -1,0 +1,20 @@
+#api appilcation prog interface....
+role ---> 1. client 2. server
+
+android --> 
+
+java,php,node,python
+
+node --> api --> android -->
+
+node url expose --> data --> json -->api
+Request method --> 
+
+GET : fetch data from server
+POST : send data to server
+PUT  : update data to server
+DELETE : delete data from server
+PATCH : update data to server
+
+app.js --> routes --> controller --> model --> db
+app.js --> routes --> controller --> model --> db -->res
