@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const { schema } = require('./RoleModel');
 const Schema = mongoose.Schema;
 
 const userSchema = new Schema({
@@ -13,6 +14,10 @@ const userSchema = new Schema({
     },
     age:{
         type:Number,
+    },
+    userrole:{
+        type:Schema.Types.ObjectId,
+        ref:'role' //role model export
     }
 
 })

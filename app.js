@@ -9,11 +9,12 @@ const mongoose = require('mongoose');
 app.use(express.json());
 
 const userRoutes = require('./routes/UserRoutes');
-
+const roleRoutes = require('./routes/RoleRoutes');
 
 
 //localhost:3000/user/user
 app.use('/user',userRoutes);
+app.use('/role',roleRoutes);
 
 mongoose.connect("mongodb://127.0.0.1:27017/mernintern",{
     useNewUrlParser:true,
