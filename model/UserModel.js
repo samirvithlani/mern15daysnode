@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const { schema } = require('./RoleModel');
+
 const Schema = mongoose.Schema;
 
 const userSchema = new Schema({
@@ -8,6 +8,7 @@ const userSchema = new Schema({
     },
     email:{
         type:String,
+        unique:true
     },
     password:{
         type:String,
