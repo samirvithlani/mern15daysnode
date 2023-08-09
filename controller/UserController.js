@@ -1,4 +1,5 @@
 const userSchema = require("../model/UserModel");
+const sendMail = require("../util/MailUtil");
 
 // const getAllUsers = (req, res) => {
 //   userSchema
@@ -80,6 +81,7 @@ const createUser = (req, res) => {
     console.log(req.body);
     const user = new userSchema(req.body)  
     user.save().then((data)=>{
+        sendMail(data.email);
         res.status(201).json({
             data:data,
             message:"User created successfully",
